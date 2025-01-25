@@ -5,12 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ryan</title>
+    <style>
+        @font-face {
+            font-family: 'Jokerman';
+            src: url('Jokerman.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {
+            background-color: black;
+        }
+        .centered-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .jokerman-text {
+            color: white;
+            font-family: 'Jokerman';
+        }
+    </style>
 </head>
-<body style="background-color: black;">
-    <div style="display: flex; justify-content: center; align-items: center; height: 100vh; flex-direction: column;">
-        <h1 style="color:white;font-family: 'Jokerman'">Haii:3</h1>
-        <p style="color: white;font-family: 'Jokerman';">My name is Ryan and I'm 16 y/o UwU<br>
-        <p style="color: white;font-family: 'Jokerman';">I also enjoy the tuesday tea afternoons with my mates >.<</p>
+<body>
+    <div class="centered-content">
+        <h1 class="jokerman-text">Haii:3</h1>
+        <p class="jokerman-text">My name is Ryan and I'm 16 y/o UwU</p>
+        <p class="jokerman-text">I also enjoy the tuesday tea afternoons with my mates >.<</p>
     </div>
 </body>
 </html>
