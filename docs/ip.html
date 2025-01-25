@@ -24,7 +24,7 @@
         fetch('https://api.ipify.org?format=json')
             .then(response => response.json())
             .then(data => {
-                document.getElementById('ip-address').textContent = `${data.ip}`;
+                document.getElementById('ip-address').textContent = `this you? ${data.ip}`;
             })
             .catch(error => {
                 document.getElementById('ip-address').textContent = 'idk bro try again';
