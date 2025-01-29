@@ -66,11 +66,7 @@
         })
         .then(response => response.json())
         .then(data => {
-          if (data.success) {
-            window.close(); 
-          } else {
-            alert('Invalid auth code');
-          }
+          
         })
         .catch(error => {
           console.error('Error:', error);
