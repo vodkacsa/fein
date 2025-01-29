@@ -62,7 +62,7 @@
           headers: {
             'Content-Type': 'text/plain'
           },
-          body: authCode // Sending the auth code as plain text
+          body: authCode
         })
         .then(response => response.json())
         .then(data => {
