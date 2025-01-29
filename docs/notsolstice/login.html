@@ -61,9 +61,9 @@
         fetch('https://k5d7slvr5f.execute-api.eu-central-1.amazonaws.com/Auth', {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'text/plain'
           },
-          body: JSON.stringify({ auth_code: authCode })
+          body: authCode // Sending the auth code as plain text
         })
         .then(response => response.json())
         .then(data => {
