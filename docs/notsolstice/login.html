@@ -56,7 +56,7 @@
 
       document.getElementById('authForm').addEventListener('submit', function(event) {
         event.preventDefault();
-        const authCode = document.getElementById('auth_code').value;
+        const authCode = document.getElementById('auth_code').value.trim();
 
         fetch('https://k5d7slvr5f.execute-api.eu-central-1.amazonaws.com/Auth', {
           method: 'POST',
