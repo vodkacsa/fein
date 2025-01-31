@@ -14,8 +14,6 @@ document.getElementById('authForm').addEventListener('submit', function(event) {
             return response.json();
         } else if (response.status === 401) {
             throw new Error('Invalid auth code.');
-        } else if (response.status === 429) {
-            throw new Error('Too many attempts. Please try again later.');
         } else {
             throw new Error('An unexpected error occurred.');
         }
