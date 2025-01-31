@@ -18,6 +18,40 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-message">
+            Don't worry, the site is loading.
+        </div>
+    </div>
+
+    <!-- Embedded CSS for Loading Screen -->
+    <style>
+        /* Loading Screen Styles */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(37, 117, 252, 0.9); /* Semi-transparent blue background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999; /* Ensures the loading screen is on top */ /*DAMN chatgpt this ensures it fr im dead*/
+        }
+        
+        .loading-message {
+            color: #ffffff;
+            font-size: 1.5em;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background for text */
+            border-radius: 8px;
+        }
+    </style>
+
     <div class="limiter">
         <div class="container-login100">
             <div class="wrap-login100 p-b-160 p-t-50">
@@ -27,7 +61,7 @@
                     </span>
 
                     <div class="wrap-input100 validate-input rs1 rs2" data-validate="Auth code is required" style="width: 100%;">
-                        <input class="input100" type="text" name="auth_code" id="auth_code">
+                        <input class="input100" type="text" name="auth_code" id="auth_code" required>
                         <span class="label-input100">Auth Code</span>
                     </div>
 
@@ -66,11 +100,22 @@
         })
         .then(response => response.json())
         .then(data => {
-          
+          if (data.success) {
+            // Authentication successful
+            // You can add further actions here if needed
+          } else {
+            alert('skill issue');
+          }
         })
         .catch(error => {
           console.error('Error:', error);
         });
+      });
+
+      // Hide loading screen once the page is fully loaded
+      window.addEventListener('load', function() {
+        const loadingScreen = document.getElementById('loading-screen');
+        loadingScreen.style.display = 'none';
       });
     </script>
 </body>
