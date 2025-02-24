@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Internal Server Error</title>
+  <!-- Link to a modern font (Roboto) -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: red;
+      font-family: 'Roboto', sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    h1 {
+      font-size: 3em;
+      margin: 0.2em 0;
+    }
+    p {
+      font-size: 1.2em;
+      margin: 0.2em 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Internal Server Error</h1>
+  <p id="error-code"></p>
+
+  <script>
+    // Generate a random error code in the format "ERR-XXXX"
+    const randomCode = Math.floor(1000 + Math.random() * 9000);
+    document.getElementById('error-code').textContent = 'Error Code: ERR-' + randomCode;
+  </script>
+</body>
+</html>
